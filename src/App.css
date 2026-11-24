@@ -1,0 +1,274 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f0f8f5;
+  color: #193b35;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 38px 25px;
+}
+
+/* Header */
+header {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  padding: 48px 45px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  background: linear-gradient(120deg, #075e50, #0c9678, #42b99b);
+  color: white;
+  box-shadow: 0 16px 35px #087c6230;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border: 45px solid #ffffff18;
+  border-radius: 50%;
+  right: -65px;
+  top: -100px;
+}
+
+header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+header p {
+  color: #d9fff1;
+  font-size: 15px;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #e0eee8;
+  box-shadow: 0 8px 30px #174b3510;
+  transition: .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px #174b3518;
+}
+
+h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 23px;
+  color: #145b4b;
+  margin-bottom: 22px;
+}
+
+/* Form */
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+
+input, select {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1.5px solid #dcebe3;
+  border-radius: 12px;
+  background: #f9fcfa;
+  color: #23483e;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: .2s;
+}
+
+input::placeholder {
+  color: #9aafa5;
+}
+
+input:focus, select:focus {
+  border-color: #13a582;
+  background: white;
+  box-shadow: 0 0 0 4px #13a58218;
+}
+
+/* Buttons */
+button {
+  border: none;
+  border-radius: 11px;
+  padding: 13px 20px;
+  background: #087d65;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+button:hover {
+  background: #075d4d;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px #087d6530;
+}
+
+form button {
+  grid-column: span 2;
+  padding: 16px;
+  background: linear-gradient(110deg, #087d65, #19ad87);
+  font-size: 15px;
+}
+
+/* Student records */
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.list-header h2 {
+  margin: 0;
+}
+
+.list-header input {
+  max-width: 310px;
+  background: #f4faf6;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid #e5eee8;
+}
+
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 17px 14px;
+  text-align: left;
+  border-bottom: 1px solid #edf2ee;
+  font-size: 13px;
+}
+
+th {
+  background: #eaf6ef;
+  color: #176b54;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+
+td {
+  color: #536a60;
+}
+
+tbody tr {
+  transition: background .2s;
+}
+
+tbody tr:hover {
+  background: #f2faf5;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Edit and Delete */
+.edit {
+  background: #e2f5eb;
+  color: #087d55;
+  margin-right: 6px;
+  padding: 9px 13px;
+}
+
+.edit:hover {
+  background: #c9edda;
+  color: #075e40;
+  box-shadow: none;
+}
+
+.delete {
+  background: #fff0e9;
+  color: #d45e45;
+  padding: 9px 13px;
+}
+
+.delete:hover {
+  background: #ffe0d5;
+  color: #b83c2a;
+  box-shadow: none;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  padding: 45px 15px;
+  color: #8ba398;
+  background: #f7fbf8;
+  border-radius: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #8ba398;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  header {
+    padding: 32px 22px;
+    border-radius: 18px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form button {
+    grid-column: span 1;
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .list-header input {
+    max-width: 100%;
+  }
+}
